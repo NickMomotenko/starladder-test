@@ -1,0 +1,16 @@
+.event-stages {
+  margin-top: 85px;
+
+  &__title {
+    margin-bottom: 19px;
+  }
+
+  &__description {
+    &-text {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.01em;
+      color: #757c84;
+    }
+  }
+}

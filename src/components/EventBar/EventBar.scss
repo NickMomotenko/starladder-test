@@ -1,0 +1,30 @@
+.event-bar {
+  border-top: 2px solid #ec3e5a;
+  margin-top: 38px;
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 15px 40px;
+    cursor: pointer;
+
+    &--active {
+      background: #ec3e5a;
+
+      .event-bar__title {
+        color: #fff;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #282830;
+  }
+}

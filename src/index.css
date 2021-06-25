@@ -9,6 +9,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  font-weight:400;
 }
 
 ul, li {
@@ -20,4 +21,7 @@ ul, li {
 button {
   outline: none;
   padding: 0;
+  background: transparent;
+  border:1px solid transparent;
+  cursor:pointer;
 }

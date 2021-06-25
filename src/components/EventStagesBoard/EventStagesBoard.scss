@@ -1,0 +1,38 @@
+.event-stages-table {
+  &__item {
+    display: flex;
+    align-items: center;
+
+    padding: 19px 15px;
+    padding-left: 26px;
+
+    &:nth-child(2n + 1) {
+      background: #fafafa;
+    }
+  }
+
+  &__index {
+    color: #282830;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 37px;
+    min-width: 30px;
+    text-align: center;
+  }
+
+  &__team {
+    display: flex;
+    align-items: center;
+
+    &-name {
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      color: #282830;
+      font-weight: 700;
+    }
+
+    &-flag{
+      margin-right: 10px;
+    }
+  }
+}
