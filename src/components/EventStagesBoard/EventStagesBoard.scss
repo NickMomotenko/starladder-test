@@ -2,11 +2,13 @@
   width: 456px;
 
   &__options {
+    margin-top: 28px;
+
     &-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 0;
+      padding: 20px 2px;
       border-top: 1px solid rgba(54, 56, 65, 0.1);
       cursor: pointer;
 
@@ -34,6 +36,8 @@
   }
 
   &__registration {
+    margin-top: 39px;
+
     &-button {
       background: #20a95a;
       border-radius: 2px;
@@ -106,6 +110,7 @@
           &-title {
             color: #282830;
             font-weight: 700;
+            letter-spacing: .04em;
           }
 
           &-date {
@@ -121,7 +126,7 @@
       width: 60px;
       border-radius: 50%;
       border: 1px solid #d7d9da;
-      margin-right: 20px;
+      margin-right: 19px;
       position: relative;
       padding: 4px;
       background-color: #f0f0f0;
@@ -145,11 +150,17 @@
     }
 
     &-info {
+      margin-top: 5px;
+
       &-title,
       &-date {
         font-size: 16px;
         letter-spacing: 0.01em;
         color: #757c84;
+      }
+
+      &-title{
+        margin-bottom: 11px;
       }
     }
   }

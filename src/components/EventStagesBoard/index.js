@@ -77,7 +77,7 @@ const EventStagesBoard = () => {
                 <div className="event-stages-board__steps-info-title">
                   {title}
                 </div>
-                <div className="event-stages-board__steps-info-date">{`${date.from} - ${date.to}`}</div>
+                <div className="event-stages-board__steps-info-date">{`${date.from} -- ${date.to}`}</div>
               </div>
             </li>
           ))}

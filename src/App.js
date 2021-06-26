@@ -16,6 +16,8 @@ import ggBetIcon from "./assets/partners/gg-bet.png";
 import teamIcon1 from "./assets/teams/1.png";
 import teamIcon2 from "./assets/teams/2.png";
 
+import battlesGroupIcon from "./assets/groups/1.png";
+
 const mathes = [
   {
     id: uuid(),
@@ -62,6 +64,43 @@ const mathes = [
     ],
     systemOfСonducting: "Bo 3",
     partners: [{ id: uuid(), partnerName: "GGBET", partnerIcon: ggBetIcon }],
+  },
+];
+
+const battles = [
+  {
+    id: uuid(),
+    groupsName: "Group Stage",
+    groupsStatus: "live",
+    groupsIcon: battlesGroupIcon,
+    groups: [
+      {
+        id: uuid(),
+        groupsName: "Group A",
+      },
+      {
+        id: uuid(),
+        groupsName: "Group B",
+      },
+    ],
+    map: "Erangel",
+  },
+  {
+    id: uuid(),
+    groupsName: "Group Stage",
+    groupsStatus: "upcoming",
+    groupsIcon: battlesGroupIcon,
+    groups: [
+      {
+        id: uuid(),
+        groupsName: "Group A",
+      },
+      {
+        id: uuid(),
+        groupsName: "Group B",
+      },
+    ],
+    map: "Erangel",
   },
 ];
 
