@@ -1,38 +1,156 @@
-.event-stages-table {
-  &__item {
-    display: flex;
-    align-items: center;
+.event-stages-board {
+  width: 456px;
 
-    padding: 19px 15px;
-    padding-left: 26px;
+  &__options {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-top: 1px solid rgba(54, 56, 65, 0.1);
+      cursor: pointer;
 
-    &:nth-child(2n + 1) {
-      background: #fafafa;
+      &:after {
+        content: "";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background: url(../../assets/icons/vector-line.png) center no-repeat;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid rgba(54, 56, 65, 0.1);
+      }
     }
-  }
 
-  &__index {
-    color: #282830;
-    font-weight: 700;
-    font-size: 18px;
-    margin-right: 37px;
-    min-width: 30px;
-    text-align: center;
-  }
-
-  &__team {
-    display: flex;
-    align-items: center;
-
-    &-name {
-      font-size: 18px;
-      letter-spacing: 0.01em;
-      color: #282830;
+    &-title {
       font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #757c84;
+    }
+  }
+
+  &__registration {
+    &-button {
+      background: #20a95a;
+      border-radius: 2px;
+      padding: 10px 20px;
+      width: 100%;
+      display: flex;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background: url(../../assets/icons/reg-button.png) center no-repeat;
+      }
+
+      &-block {
+      }
+
+      &-label {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #ffffff;
+
+        &--bold {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__steps {
+    &-list {
+      position: relative;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 5px;
+        background: #ffffff;
+        box-shadow: inset 1px 0px 2px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 30px;
+      }
     }
 
-    &-flag{
-      margin-right: 10px;
+    &-item {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--active {
+        .event-stages-board__steps-icon {
+          background-color: #fff;
+          border-color: #20a95a;
+
+          &-inner {
+            background: #20a95a;
+          }
+        }
+        .event-stages-board__steps-info {
+          &-title {
+            color: #282830;
+            font-weight: 700;
+          }
+
+          &-date {
+            color: #282830;
+          }
+        }
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 1px solid #d7d9da;
+      margin-right: 20px;
+      position: relative;
+      padding: 4px;
+      background-color: #f0f0f0;
+
+      &-inner {
+        padding: 5px;
+        border-radius: 50%;
+        background: blue;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+      }
+
+      &-img {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-info {
+      &-title,
+      &-date {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #757c84;
+      }
     }
   }
 }
