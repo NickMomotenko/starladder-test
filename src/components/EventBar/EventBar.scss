@@ -84,5 +84,10 @@
     &__list {
       justify-content: center;
     }
+
+    &__item {
+      flex: 1;
+      text-align: center;
+    }
   }
 }
