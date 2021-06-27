@@ -1,11 +1,14 @@
 .event-stages {
-  margin-top: 85px;
+  margin-top: 88px;
 
   &__title {
     margin-bottom: 19px;
   }
 
   &__description {
+    max-width: 55%;
+    margin-bottom: 29px;
+
     &-text {
       font-size: 18px;
       line-height: 30px;
@@ -14,7 +17,17 @@
     }
   }
 
-  &__row{
+  &__row {
     display: flex;
+  }
+
+  &__reg {
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      color: #282830;
+      margin-bottom: 36px;
+    }
   }
 }

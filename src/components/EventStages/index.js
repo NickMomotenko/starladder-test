@@ -7,6 +7,8 @@ import EventStagesBoard from "../EventStagesBoard";
 import "./EventStages.scss";
 
 const EventStages = () => {
+  const registrationCounter = 24;
+
   return (
     <div className="event-stages">
       <div className="event-stages__title">
@@ -20,7 +22,7 @@ const EventStages = () => {
           Major.
         </p>
       </div>
-      <div className="event-stages__tt">Зарегестрированно :24</div>
+      <div className="event-stages__reg-title">{`Зарегестрировано: ${registrationCounter}`}</div>
       <div className="event-stages__row">
         <EventStagesTable />
         <EventStagesBoard />

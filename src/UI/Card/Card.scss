@@ -8,7 +8,7 @@
   border-radius: 2px;
   margin-right: 35px;
 
-  width: 338px;
+  width: 335px;
   min-height: 330px;
 
   display: inline-block;
@@ -32,7 +32,40 @@
     }
   }
 
-  &:last-child {
+  &--battles {
+    .card {
+      &__team {
+        &-name {
+          line-height: 38px;
+        }
+
+        &-coef {
+          margin-top: 0;
+        }
+
+        &-logos {
+          margin-top: 96px;
+        }
+      }
+
+      &__bottom {
+        margin-top: 5px;
+      }
+
+      &__live {
+        &-button {
+          margin-right: 0;
+          margin-bottom: 7px;
+        }
+
+        &-text {
+          margin-right: -5px;
+        }
+      }
+    }
+  }
+
+  .card &:last-child {
     margin-right: 0;
   }
 
@@ -43,6 +76,7 @@
 
   &__head {
     display: flex;
+    min-height: 62px;
 
     .card__row {
       width: 100%;
@@ -96,7 +130,6 @@
 
   &__date {
     text-align: right;
-    margin-right: 3px;
 
     &-time {
       font-size: 24px;
@@ -117,6 +150,10 @@
 
     &--center {
       align-items: center;
+    }
+
+    &--column {
+      flex-direction: column;
     }
   }
 
@@ -170,6 +207,20 @@
       &--correct {
         margin-top: -9px;
       }
+
+      &--battle {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #757c84;
+        max-width: 100%;
+        background: #f0f0f0;
+        border-radius: 4px;
+
+        padding: 10px 14px;
+      }
     }
   }
 
@@ -184,6 +235,15 @@
     letter-spacing: 0.01em;
     color: #757c84;
     font-size: 14px;
+
+    &-text {
+      &:after {
+        content: "•";
+
+        margin-right: 4px;
+        display: inline-block;
+      }
+    }
   }
 
   &__partners {

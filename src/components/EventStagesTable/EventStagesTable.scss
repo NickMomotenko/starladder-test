@@ -1,4 +1,7 @@
 .event-stages-table {
+  flex: 1;
+  margin-right: 36px;
+
   &__item {
     display: flex;
     align-items: center;
@@ -6,8 +9,21 @@
     padding: 19px 15px;
     padding-left: 26px;
 
-    &:nth-child(2n + 1) {
+    &:nth-child(2n) {
       background: #fafafa;
+    }
+
+    &--head {
+      background: transparent !important;
+      padding: 0 15px 11px 26px;
+
+      .event-stages-table__index,
+      .event-stages-table__team-name {
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: #757c84;
+        font-size: 14px;
+      }
     }
   }
 
@@ -31,7 +47,7 @@
       font-weight: 700;
     }
 
-    &-flag{
+    &-flag {
       margin-right: 10px;
     }
   }

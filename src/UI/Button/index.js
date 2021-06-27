@@ -1,10 +1,15 @@
+import classNames from "classnames";
 import React from "react";
 
 import "./Button.scss";
 
-const Button = ({ text, icon }) => {
+const Button = ({ text, icon, border }) => {
   return (
-    <button className="button">
+    <button
+      className={classNames("button", {
+        "button--border": border,
+      })}
+    >
       <span className="button__text">{text}</span>
       {icon && <img src={icon} alt="button icon" className="button__icon" />}
     </button>

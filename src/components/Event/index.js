@@ -72,7 +72,7 @@ const Event = () => {
               <Button text="Read Announcement" icon={lineIcon} />
             </div>
             <div className="event__options-button">
-              <Button text="GET TICKETS" icon={ticketsIcon} />
+              <Button text="GET TICKETS" icon={ticketsIcon} border />
             </div>
           </div>
           <div className="event__socials">

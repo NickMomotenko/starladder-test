@@ -1,7 +1,12 @@
 .event-bar {
-  border-top: 2px solid #ec3e5a;
-  margin-top: 38px;
-  margin-bottom: 60px;
+  &__head {
+    margin-bottom: 59px;
+    border-top: 2px solid #ec3e5a;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+  }
 
   &__list {
     display: flex;
@@ -11,20 +16,26 @@
     padding: 15px 40px;
     cursor: pointer;
 
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 0.01em;
+      color: #282830;
+    }
+
     &--active {
       background: #ec3e5a;
 
-      .event-bar__title {
+      .event-bar__item-title {
         color: #fff;
       }
     }
   }
 
-  &__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.01em;
-    color: #282830;
+  &__cards {
+    &-list {
+      display: flex;
+    }
   }
 }

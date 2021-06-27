@@ -7,7 +7,12 @@ import "./EventStagesTable.scss";
 import urkFlagIcon from "../../assets/icons/ukr.png";
 
 const teams = [
-  { id: uuid(), tableIndex: 1, teamName: "Natus Vincere", country: "Ukraine" },
+  {
+    id: uuid(),
+    tableIndex: 353,
+    teamName: "Dianne Russell",
+    country: "Ukraine",
+  },
   { id: uuid(), tableIndex: 2, teamName: "Natus Vincere", country: "Ukraine" },
   { id: uuid(), tableIndex: 3, teamName: "Natus Vincere", country: "Ukraine" },
   { id: uuid(), tableIndex: 4, teamName: "Natus Vincere", country: "Ukraine" },
@@ -20,6 +25,12 @@ const teams = [
 const EventStagesTable = () => {
   return (
     <div className="event-stages-table">
+      <div className="event-stages-table__item event-stages-table__item--head">
+        <div className="event-stages-table__index">#</div>
+        <div className="event-stages-table__team">
+          <span className="event-stages-table__team-name">Команда</span>
+        </div>
+      </div>
       <ul className="event-stages-table__list">
         {teams?.map(({ id, tableIndex, teamName }) => (
           <li key={id} className="event-stages-table__item">

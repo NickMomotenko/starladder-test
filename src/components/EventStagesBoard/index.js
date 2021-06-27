@@ -23,7 +23,7 @@ const team = {
 const steps = [
   {
     id: 1,
-    title: "Registation",
+    title: "Registration",
     icon: trophyIcon,
     date: {
       from: "29 sep, 19:00",

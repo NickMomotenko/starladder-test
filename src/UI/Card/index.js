@@ -4,32 +4,32 @@ import classnames from "classnames";
 
 import "./Card.scss";
 
-import redStarIcon from "../../assets/logo-star.png";
-import starIcon from "../../assets/logo-star-s.png";
-
 const Card = ({
-  matchName,
-  matchStatus,
-  matchTime,
+  title,
+  status,
   teams,
-  systemOfСonducting,
+  logos,
   partners,
+  time,
+  systemData,
+  option,
+  index
 }) => {
+  const [t1, t2] = teams;
+
   return (
-    <div
-      className={classnames("card", { "card--live": matchStatus === "live" })}
-    >
+    <li className={classnames("card", { "card--live": status === "live" , "card--battles" : option === 'battles' })}>
       <div className="card__content">
         <div className="card__head">
           <div className="card__row">
-            <div className="card__head-title">{matchName}</div>
-            {matchStatus === "upcoming" && (
+            <div className="card__head-title">{title}</div>
+            {status === "upcoming" && (
               <div className="card__date">
-                <div className="card__date-time">{matchTime.time}</div>
-                <div className="card__date-match">{matchTime.date}</div>
+                <div className="card__date-time">{time?.time}</div>
+                <div className="card__date-match">{time?.date}</div>
               </div>
             )}
-            {matchStatus === "live" && (
+            {status === "live" && (
               <div className="card__live-block">
                 <button className="card__live-button"></button>
                 <div className="card__live-button-text">WATCH LIVE!</div>
@@ -39,29 +39,55 @@ const Card = ({
         </div>
         <div className="card__team-logos">
           <div className="card__row">
-            {teams?.map((team) => (
-              <img
-                key={team.id}
-                src={team.teamIcon}
-                className="card__team-icon"
-              ></img>
-            ))}
+            {option === "matches" &&
+              teams?.map((team) => (
+                <img
+                  key={team.id}
+                  src={team.icon}
+                  className="card__team-icon"
+                />
+              ))}
+            {option === "battles" && (
+              <img src={logos} className="card__team-icon" />
+            )}
           </div>
         </div>
         <div className="card__team-coefs">
-          <div className="card__row card__row--center">
-            <div className="card__team-name">Albert Warren</div>
-            <div className="card__team-coef">3.22</div>
-          </div>
-          <div className="card__row card__row--center">
-            <div className="card__team-name">Gloria Henry</div>
-            <div className="card__team-coef card__team-coef--correct">
-              53.22
+          {option === "matches" ? (
+            <>
+              <div className="card__row card__row--center">
+                <div className="card__team-name">{t1.name}</div>
+                <div className="card__team-coef">{t1.coef}</div>
+              </div>
+              <div className="card__row card__row--center">
+                <div className="card__team-name">{t2.name}</div>
+                <div className="card__team-coef card__team-coef--correct">
+                  {t2.coef}
+                </div>
+              </div>
+            </>
+          ) : option === "battles" ? (
+            <div className="card__row card__row--center">
+              <div className="card__row card__row--column">
+                <div className="card__team-name">{t1.name}</div>
+                <div className="card__team-name">{t2.name}</div>
+              </div>
+              <div className="card__row">
+                <div className="card__team-coef card__team-coef--battle">{`Match #${++index}`}</div>
+              </div>
             </div>
-          </div>
+          ) : (
+            <></>
+          )}
         </div>
         <div className="card__bottom">
-          <div className="card__system-conduction">{systemOfСonducting}</div>
+          <div className="card__system-conduction">
+            {status === "upcoming" && (
+              <span className="card__system-conduction-text">{`Starts in: 5 hours 39 min `}</span>
+            )}
+            {option === "battles" && "Map: "}
+            {systemData}
+          </div>
           <div className="card__partners">
             {partners?.map((partner) => (
               <div key={partner.id} className="card__partner">
@@ -75,7 +101,7 @@ const Card = ({
           </div>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

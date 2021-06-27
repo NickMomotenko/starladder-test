@@ -1,12 +1,12 @@
 import React from "react";
 
-import styles from "./Header.module.css";
+import "./Header.scss";
 
 import Logo from "../Logo";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className="header">
       <Logo />
     </header>
   );

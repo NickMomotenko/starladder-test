@@ -1,5 +1,6 @@
 .event-stages-board {
   width: 456px;
+  margin-top: 31px;
 
   &__options {
     margin-top: 28px;
@@ -54,16 +55,21 @@
       }
 
       &-block {
+        margin-left: 68px;
+        margin-top: 2px;
       }
 
       &-label {
         font-size: 14px;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
+        letter-spacing: 0.01em;
         color: #ffffff;
 
         &--bold {
-          font-weight: 700;
+          font-weight: 500;
+          letter-spacing: 1.9px;
+          font-size: 13px;
+          text-transform: uppercase;
+          margin-bottom: 4px;
         }
       }
     }
@@ -110,7 +116,7 @@
           &-title {
             color: #282830;
             font-weight: 700;
-            letter-spacing: .04em;
+            letter-spacing: 0.04em;
           }
 
           &-date {
@@ -159,7 +165,7 @@
         color: #757c84;
       }
 
-      &-title{
+      &-title {
         margin-bottom: 11px;
       }
     }

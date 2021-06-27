@@ -1,9 +1,18 @@
+import classNames from "classnames";
 import React from "react";
 
-import styles from "./Container.module.scss";
+import "./Container.scss";
 
-const Container = ({ children }) => {
-  return <div className={styles.container}>{children}</div>;
+const Container = ({ children, main }) => {
+  return (
+    <div
+      className={classNames("container", {
+        "container--main": main,
+      })}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Container;
