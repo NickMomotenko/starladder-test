@@ -34,17 +34,21 @@ const EventStagesTable = () => {
       <ul className="event-stages-table__list">
         {teams?.map(({ id, tableIndex, teamName }) => (
           <li key={id} className="event-stages-table__item">
-            <div key={id} className="event-stages-table__index">
-              {tableIndex}
-            </div>
-            <div className="event-stages-table__team">
-              <img
-                src={urkFlagIcon}
-                className="event-stages-table__team-flag"
-                alt="team flag"
-              />
-              <span className="event-stages-table__team-name">{teamName}</span>
-            </div>
+            <a href="#" className="event-stages-table__link">
+              <div key={id} className="event-stages-table__index">
+                {tableIndex}
+              </div>
+              <div className="event-stages-table__team">
+                <img
+                  src={urkFlagIcon}
+                  className="event-stages-table__team-flag"
+                  alt="team flag"
+                />
+                <span className="event-stages-table__team-name">
+                  {teamName}
+                </span>
+              </div>
+            </a>
           </li>
         ))}
       </ul>

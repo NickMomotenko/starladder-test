@@ -39,3 +39,15 @@
     }
   }
 }
+
+@media screen and(max-width:480px) {
+  .event-bar{
+    &__cards-list{
+      flex-direction: column;
+    }
+
+    &__list{
+      justify-content:center;
+    }
+  }
+}

@@ -96,7 +96,9 @@ const EventStagesBoard = () => {
       <ul className="event-stages-board__options">
         {options?.map(({ id, title }) => (
           <li key={id} className="event-stages-board__options-item">
-            <span className="event-stages-board__options-title">{title}</span>
+            <a href="#" className="event-stages-board__options-link">
+              <span className="event-stages-board__options-title">{title}</span>
+            </a>
           </li>
         ))}
       </ul>

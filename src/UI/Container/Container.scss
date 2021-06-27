@@ -10,14 +10,10 @@
 
 @media screen and (max-width: 1500px) {
   .container {
+    padding: 0 3%;
+
     &--main {
       padding: 93px 3% 0;
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 3%;
   }
 }

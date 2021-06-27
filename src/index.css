@@ -28,9 +28,13 @@ button {
   cursor: pointer;
 }
 
-p{
-  padding:0;
-  margin:0;
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .app,
@@ -38,4 +42,8 @@ p{
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+}
+
+#root {
+  background: #fafafa;
 }

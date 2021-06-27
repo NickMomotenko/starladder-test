@@ -13,12 +13,34 @@ const Card = ({
   time,
   systemData,
   option,
-  index
+  index,
+  mapScore,
+  winner,
 }) => {
   const [t1, t2] = teams;
 
+  const mapScoreGenerator = (score) => {
+    let str = "";
+
+    score.forEach(({ score }, ind) => {
+      if (++ind === score.length) {
+        str += score;
+      } else {
+        str += score + " • ";
+      }
+    });
+
+    return str;
+  };
+
   return (
-    <li className={classnames("card", { "card--live": status === "live" , "card--battles" : option === 'battles' })}>
+    <li
+      className={classnames("card", {
+        "card--live": status === "live",
+        "card--battles": option === "battles",
+        "card--finished": status === "finished",
+      })}
+    >
       <div className="card__content">
         <div className="card__head">
           <div className="card__row">
@@ -30,10 +52,10 @@ const Card = ({
               </div>
             )}
             {status === "live" && (
-              <div className="card__live-block">
-                <button className="card__live-button"></button>
+              <a href="#" className="card__live-block">
+                <div className="card__live-button"></div>
                 <div className="card__live-button-text">WATCH LIVE!</div>
-              </div>
+              </a>
             )}
           </div>
         </div>
@@ -55,14 +77,24 @@ const Card = ({
         <div className="card__team-coefs">
           {option === "matches" ? (
             <>
-              <div className="card__row card__row--center">
+              <div
+                className={classnames("card__row card__row--center", {
+                  "card__row--lost": t1.maps < t2.maps,
+                })}
+              >
                 <div className="card__team-name">{t1.name}</div>
-                <div className="card__team-coef">{t1.coef}</div>
+                <div className="card__team-coef">
+                  {status === "finished" ? `${t1.maps}` : `${t1.coef}`}
+                </div>
               </div>
-              <div className="card__row card__row--center">
+              <div
+                className={classnames("card__row card__row--center", {
+                  "card__row--lost": t1.maps > t2.maps,
+                })}
+              >
                 <div className="card__team-name">{t2.name}</div>
                 <div className="card__team-coef card__team-coef--correct">
-                  {t2.coef}
+                  {status === "finished" ? `${t2.maps}` : `${t2.coef}`}
                 </div>
               </div>
             </>
@@ -73,7 +105,9 @@ const Card = ({
                 <div className="card__team-name">{t2.name}</div>
               </div>
               <div className="card__row">
-                <div className="card__team-coef card__team-coef--battle">{`Match #${++index}`}</div>
+                <div className="card__team-coef card__team-coef--battle">
+                  {`Match #${++index}`}
+                </div>
               </div>
             </div>
           ) : (
@@ -86,7 +120,9 @@ const Card = ({
               <span className="card__system-conduction-text">{`Starts in: 5 hours 39 min `}</span>
             )}
             {option === "battles" && "Map: "}
-            {systemData}
+            {/* {status === "finished" ? mapScoreGenerator(mapScore) : systemData} */}
+            {/* {status === "finished" &&
+              `${winner?.name} (${winner?.group}) - ${winner?.pts}pts`} */}
           </div>
           <div className="card__partners">
             {partners?.map((partner) => (

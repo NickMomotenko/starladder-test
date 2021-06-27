@@ -70,6 +70,47 @@ const mathes = [
     systemOfСonducting: "Bo 3",
     partners: [{ id: uuid(), partnerName: "GGBET", partnerIcon: ggBetIcon }],
   },
+  {
+    id: uuid(),
+    matchName: "Asia Minor: Play-Off",
+    matchStatus: "finished",
+    matchTime: {
+      time: "19:00",
+      date: "29 октября",
+    },
+    teams: [
+      {
+        id: uuid(),
+        name: "Serenity Alexander",
+        icon: teamIcon3,
+        coef: 3.22,
+        maps: 2,
+      },
+      {
+        id: uuid(),
+        name: "Priscilla Lane",
+        icon: teamIcon4,
+        coef: 53.22,
+        maps: 1,
+      },
+    ],
+    gameScore: [
+      {
+        map: "Mirage",
+        score: "1:0",
+      },
+      {
+        map: "Dust2",
+        score: "0:1",
+      },
+      {
+        map: "Nuke",
+        score: "1:0",
+      },
+    ],
+    systemOfСonducting: "Bo 3",
+    partners: [{ id: uuid(), partnerName: "GGBET", partnerIcon: ggBetIcon }],
+  },
 ];
 
 const battles = [
@@ -111,10 +152,35 @@ const battles = [
     ],
     map: "Erangel",
   },
+  {
+    id: uuid(),
+    groupName: "Group Stage",
+    groupStatus: "finished",
+    groupIcon: battlesGroupIcon,
+    groupTime: {
+      time: "19:00",
+      date: "March 8",
+    },
+    groups: [
+      {
+        id: uuid(),
+        name: "Group A",
+      },
+      {
+        id: uuid(),
+        name: "Group B",
+      },
+    ],
+    winner: {
+      name: "Natus Vincere",
+      group: "A",
+      pts: "233",
+    },
+  },
 ];
 
 const EventBar = () => {
-  const [activeOption, setActiveOption] = useState(options[1]);
+  const [activeOption, setActiveOption] = useState(options[0]);
 
   const changeActiveOption = (id) => {
     setActiveOption(options.find((item) => item.id === id));
@@ -152,6 +218,7 @@ const EventBar = () => {
                 partners={match.partners}
                 time={match.matchTime}
                 systemData={match.systemOfСonducting}
+                mapScore={match.gameScore}
                 option={activeOption?.status}
               />
             ))
@@ -166,6 +233,7 @@ const EventBar = () => {
                 time={battle.groupTime}
                 systemData={battle.map}
                 option={activeOption?.status}
+                winner={battle.winner}
                 index={index}
               />
             ))

@@ -65,7 +65,17 @@
     }
   }
 
-  .card &:last-child {
+  &--finished {
+    .card {
+      &__team-coef {
+        font-size: 24px;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &:last-child {
     margin-right: 0;
   }
 
@@ -154,6 +164,13 @@
 
     &--column {
       flex-direction: column;
+    }
+
+    &--lost {
+      .card__team-name,
+      .card__team-coef {
+        color: #757c84;
+      }
     }
   }
 
@@ -248,5 +265,117 @@
 
   &__partners {
     display: flex;
+  }
+}
+
+@media screen and(max-width:480px) {
+  .card {
+    width: 100%;
+    padding: 16px 14px 10px;
+    min-height: 225px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      width: 155px;
+      height: 140px;
+      background-size: contain;
+    }
+
+    &__head-title {
+      font-size: 12px;
+    }
+
+    &__team {
+      &-icon {
+        height: 40px;
+        width: 40px;
+      }
+
+      &-logos {
+        margin-top: -15px;
+      }
+
+      &-coefs {
+        margin-top: 10px;
+
+        .card__row {
+          margin-bottom: 1px;
+        }
+      }
+
+      &-coef {
+        min-width: 58px;
+        margin-top: 4px;
+        font-size: 12px;
+
+        &--correct {
+          margin-top: 2px;
+        }
+      }
+    }
+
+    &__system-conduction {
+      font-size: 12px;
+    }
+
+    &__bottom {
+      margin-top: 4px;
+    }
+
+    &__partners {
+      margin-top: 4px;
+      margin-right: -3px;
+    }
+
+    &__live {
+      &-button {
+        height: 25px;
+        width: 25px;
+        margin-right: 11px;
+        margin-bottom: 6px;
+
+        &-text {
+          font-size: 12px;
+          width: 45px;
+          text-align: center;
+          margin-right: 2px;
+        }
+      }
+
+      &-block {
+        margin-top: -4px;
+      }
+    }
+
+    &--battles {
+      .card {
+        &__team {
+          &-icon {
+            height: 30px;
+            width: 30px;
+          }
+
+          &-logos {
+            margin-top: -5px;
+          }
+
+          &-name {
+            line-height: 36px;
+          }
+
+          &-coefs {
+            margin-top: 10px;
+
+            .card__row {
+              margin-bottom: 1px;
+            }
+          }
+        }
+      }
+    }
   }
 }
