@@ -40,14 +40,14 @@ const Event = () => {
   return (
     <div
       className="event"
-      style={{ background: `url(${preview}) center no-repeat` }}
+      style={{ background: `url(${preview}) center /cover no-repeat` }}
     >
       <Container>
         <div className="event__logo">
           <img src={logo} alt="event logo icon" className="event__logo-icon" />
         </div>
         <div className="event__title-name">{title}</div>
-        <div className="event__row" style={{ width: "98%" }}>
+        <div className="event__row event__row--description">
           <div className="event__description">
             <div className="event__description-text">{description}</div>
           </div>
@@ -66,7 +66,7 @@ const Event = () => {
             </div>
           </div>
         </div>
-        <div className="event__row" style={{ marginTop: "86px", width: "87%" }}>
+        <div className="event__row event__row--options">
           <div className="event__options">
             <div className="event__options-button">
               <Button text="Read Announcement" icon={lineIcon} />

@@ -7,3 +7,9 @@
     padding-top: 93px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 3%;
+  }
+}
