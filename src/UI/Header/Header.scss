@@ -1,11 +1,11 @@
 .header {
-    background-color: black;
-    height: 80px;
-    padding: 0 52px;
+  background-color: black;
+  height: 80px;
+  padding: 0 52px;
 }
 
-@media screen and (max-width:480px){
-    .header{
-        padding: 0;
-    }
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 0;
+  }
 }

@@ -29,3 +29,10 @@
     background-color: #ca4c60;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .button {
+    min-width: initial;
+    width: 100%;
+  }
+}

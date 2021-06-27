@@ -16,7 +16,7 @@ const options = [
 ];
 
 const EventBar = () => {
-  const [activeOption, setActiveOption] = useState(options[1]);
+  const [activeOption, setActiveOption] = useState(options[0]);
 
   const { mathes, battles } = useData();
 

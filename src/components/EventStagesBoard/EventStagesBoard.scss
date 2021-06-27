@@ -44,6 +44,7 @@
 
     &-button {
       background: #20a95a;
+      background: url(../../assets/patterns/triangle-1.png) center no-repeat;
       border-radius: 2px;
       padding: 10px 20px;
       width: 100%;
@@ -56,20 +57,8 @@
         height: 40px;
         width: 40px;
         background: url(../../assets/icons/reg-button.png) center no-repeat;
-        flex-shrink: 0;
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        min-height: 100%;
-        width: 80%;
         background-size: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        background: url(../../assets/patterns/triangle.png) center no-repeat;
+        flex-shrink: 0;
       }
 
       &-block {
@@ -199,5 +188,13 @@
 @media screen and(max-width:540px) {
   .event-stages-board {
     width: 100%;
+  }
+}
+
+@media screen and(max-width:400px) {
+  .event-stages-board {
+    &__registration-button-block{
+      margin-left: 10px;
+    }
   }
 }
