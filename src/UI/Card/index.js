@@ -36,8 +36,11 @@ const Card = ({
   return (
     <li
       className={classnames("card", {
-        "card--live": status === "live",
         "card--battles": option === "battles",
+        "card--matches": option === "matches",
+
+        "card--live": status === "live",
+        "card--upcoming": status === "upcoming",
         "card--finished": status === "finished",
       })}
     >
@@ -46,6 +49,12 @@ const Card = ({
           <div className="card__row">
             <div className="card__head-title">{title}</div>
             {status === "upcoming" && (
+              <div className="card__date">
+                <div className="card__date-time">{time?.time}</div>
+                <div className="card__date-match">{time?.date}</div>
+              </div>
+            )}
+            {status === "finished" && (
               <div className="card__date">
                 <div className="card__date-time">{time?.time}</div>
                 <div className="card__date-match">{time?.date}</div>
@@ -79,7 +88,7 @@ const Card = ({
             <>
               <div
                 className={classnames("card__row card__row--center", {
-                  "card__row--lost": t1.maps < t2.maps,
+                  "card__row--loser": t1.maps < t2.maps,
                 })}
               >
                 <div className="card__team-name">{t1.name}</div>
@@ -89,11 +98,11 @@ const Card = ({
               </div>
               <div
                 className={classnames("card__row card__row--center", {
-                  "card__row--lost": t1.maps > t2.maps,
+                  "card__row--loser": t1.maps > t2.maps,
                 })}
               >
                 <div className="card__team-name">{t2.name}</div>
-                <div className="card__team-coef card__team-coef--correct">
+                <div className="card__team-coef">
                   {status === "finished" ? `${t2.maps}` : `${t2.coef}`}
                 </div>
               </div>
@@ -116,13 +125,21 @@ const Card = ({
         </div>
         <div className="card__bottom">
           <div className="card__system-conduction">
-            {status === "upcoming" && (
-              <span className="card__system-conduction-text">{`Starts in: 5 hours 39 min `}</span>
+            {option === "matches" && status === "upcoming" && (
+              <span className="card__system-conduction-text">{`Starts in: 5 hours 39 min • ${systemData}`}</span>
             )}
-            {option === "battles" && "Map: "}
-            {/* {status === "finished" ? mapScoreGenerator(mapScore) : systemData} */}
-            {/* {status === "finished" &&
-              `${winner?.name} (${winner?.group}) - ${winner?.pts}pts`} */}
+            {option === "matches" && status === "live" && systemData}
+            {option === "matches" &&
+              status === "finished" &&
+              mapScoreGenerator(mapScore)}
+
+            {option === "battles" && status === "live" && `Map: ${systemData}`}
+            {option === "battles" && status === "upcoming" && (
+              <span className="card__system-conduction-text">{`Starts in: 5 hours 39 min • Map: ${systemData}`}</span>
+            )}
+            {option === "battles" &&
+              status === "finished" &&
+              `${winner?.name} (${winner?.group}) - ${winner?.pts}pts`}
           </div>
           <div className="card__partners">
             {partners?.map((partner) => (

@@ -32,6 +32,59 @@
     }
   }
 
+  &--matches.card--live {
+    .card {
+      &__live {
+        &-button {
+          margin-bottom: 7px;
+        }
+      }
+
+      &__team-coef {
+        &:last-child {
+          margin-top: -6px;
+        }
+      }
+    }
+  }
+
+  &--matches.card--finished {
+    .card {
+      &__row {
+        &--loser {
+          .card__team-name,
+          .card__team-coef {
+            color: #757c84;
+          }
+        }
+      }
+
+      &__team {
+        &-coef {
+          font-size: 24px;
+          background-color: transparent;
+          border-color: transparent;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &--battles.card--live {
+    .card {
+      &__live {
+        &-button {
+          margin-right: 0;
+          margin-bottom: 3px;
+
+          &-text {
+            margin-right: -5px;
+          }
+        }
+      }
+    }
+  }
+
   &--battles {
     .card {
       &__team {
@@ -51,32 +104,7 @@
       &__bottom {
         margin-top: 5px;
       }
-
-      &__live {
-        &-button {
-          margin-right: 0;
-          margin-bottom: 7px;
-        }
-
-        &-text {
-          margin-right: -5px;
-        }
-      }
     }
-  }
-
-  &--finished {
-    .card {
-      &__team-coef {
-        font-size: 24px;
-        background-color: transparent;
-        border-color: transparent;
-      }
-    }
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 
   &__content {
@@ -165,13 +193,6 @@
     &--column {
       flex-direction: column;
     }
-
-    &--lost {
-      .card__team-name,
-      .card__team-coef {
-        color: #757c84;
-      }
-    }
   }
 
   &__team {
@@ -192,7 +213,7 @@
 
       .card__row {
         justify-content: space-between;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
 
         &:last-child {
           margin-bottom: 0;
@@ -252,15 +273,6 @@
     letter-spacing: 0.01em;
     color: #757c84;
     font-size: 14px;
-
-    &-text {
-      &:after {
-        content: "•";
-
-        margin-right: 4px;
-        display: inline-block;
-      }
-    }
   }
 
   &__partners {
@@ -268,16 +280,12 @@
   }
 }
 
-@media screen and(max-width:480px) {
+@media screen and(max-width:650px) {
   .card {
     width: 100%;
     padding: 16px 14px 10px;
     min-height: 225px;
     margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
     &:after {
       width: 155px;
@@ -354,6 +362,36 @@
     &--battles {
       .card {
         &__team {
+          &-logos {
+            margin-top: -5px;
+          }
+
+          &-icon {
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    &--battles.card--live {
+      .card {
+        &__live {
+          &-block {
+            margin-right: 10px;
+            margin-top: -1px;
+          }
+
+          &-button {
+            margin-bottom: 2px;
+
+            &-text {
+              margin-right: -9px;
+            }
+          }
+        }
+
+        &__team {
           &-icon {
             height: 30px;
             width: 30px;
@@ -373,6 +411,16 @@
             .card__row {
               margin-bottom: 1px;
             }
+          }
+        }
+      }
+    }
+
+    &--battles.card--upcoming {
+      .card {
+        &__team {
+          &-name {
+            line-height: 36px;
           }
         }
       }

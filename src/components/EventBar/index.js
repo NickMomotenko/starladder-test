@@ -73,6 +73,27 @@ const mathes = [
   {
     id: uuid(),
     matchName: "Asia Minor: Play-Off",
+    matchStatus: "live",
+    teams: [
+      {
+        id: uuid(),
+        name: "Albert Warren",
+        icon: teamIcon1,
+        coef: 3.22,
+      },
+      {
+        id: uuid(),
+        name: "Gloria Henry",
+        icon: teamIcon2,
+        coef: 53.22,
+      },
+    ],
+    systemOfСonducting: "Bo 3",
+    partners: [{ id: uuid(), partnerName: "GGBET", partnerIcon: ggBetIcon }],
+  },
+  {
+    id: uuid(),
+    matchName: "Asia Minor: Play-Off",
     matchStatus: "finished",
     matchTime: {
       time: "19:00",
@@ -155,6 +176,27 @@ const battles = [
   {
     id: uuid(),
     groupName: "Group Stage",
+    groupStatus: "upcoming",
+    groupIcon: battlesGroupIcon,
+    groupTime: {
+      time: "19:00",
+      date: "March 8",
+    },
+    groups: [
+      {
+        id: uuid(),
+        name: "Group A",
+      },
+      {
+        id: uuid(),
+        name: "Group B",
+      },
+    ],
+    map: "Erangel",
+  },
+  {
+    id: uuid(),
+    groupName: "Group Stage",
     groupStatus: "finished",
     groupIcon: battlesGroupIcon,
     groupTime: {
@@ -180,10 +222,10 @@ const battles = [
 ];
 
 const EventBar = () => {
-  const [activeOption, setActiveOption] = useState(options[0]);
+  const [activeOption, setActiveOption] = useState(options[1]);
 
-  const changeActiveOption = (id) => {
-    setActiveOption(options.find((item) => item.id === id));
+  const changeActiveOption = (item) => {
+    setActiveOption(item);
   };
 
   return (
@@ -193,15 +235,15 @@ const EventBar = () => {
       </div>
       <div className="event-bar__head">
         <ul className="event-bar__list">
-          {options?.map(({ id, name }) => (
+          {options?.map((option) => (
             <li
-              key={id}
+              key={option.id}
               className={classNames("event-bar__item", {
-                "event-bar__item--active": activeOption.id === id,
+                "event-bar__item--active": activeOption.id === option.id,
               })}
-              onClick={() => changeActiveOption(id)}
+              onClick={() => changeActiveOption(option)}
             >
-              <div className="event-bar__item-title">{name}</div>
+              <div className="event-bar__item-title">{option.name}</div>
             </li>
           ))}
         </ul>
