@@ -52,6 +52,7 @@
         height: 40px;
         width: 40px;
         background: url(../../assets/icons/reg-button.png) center no-repeat;
+        flex-shrink: 0;
       }
 
       &-block {
@@ -169,5 +170,17 @@
         margin-bottom: 11px;
       }
     }
+  }
+}
+
+@media screen and(max-width:920px) {
+  .event-stages-board {
+    align-self: center;
+  }
+}
+
+@media screen and(max-width:540px) {
+  .event-stages-board {
+    width: 100%;
   }
 }
