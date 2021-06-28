@@ -1,13 +1,14 @@
 import React from "react";
 
 import { uuid } from "uuidv4";
+import classNames from "classnames";
 
 import "./EventStagesBoard.scss";
 
-import timeIcon from "../../assets/icons/time-end-date.png";
-import toolsIcon from "../../assets/icons/tools.png";
-import trophyIcon from "../../assets/icons/trophy.png";
-import classNames from "classnames";
+import timeIcon from "../../assets/icons/time-end-date.svg";
+import toolsIcon from "../../assets/icons/tools.svg";
+import trophyIcon from "../../assets/icons/trophy.svg";
+
 
 const options = [
   { id: uuid(), title: "Support" },

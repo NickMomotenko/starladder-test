@@ -56,7 +56,7 @@
         display: inline-block;
         height: 40px;
         width: 40px;
-        background: url(../../assets/icons/reg-button.png) center no-repeat;
+        background: url(../../assets/icons/reg-button.svg) center no-repeat;
         background-size: cover;
         flex-shrink: 0;
       }
@@ -193,7 +193,7 @@
 
 @media screen and(max-width:400px) {
   .event-stages-board {
-    &__registration-button-block{
+    &__registration-button-block {
       margin-left: 10px;
     }
   }

@@ -4,7 +4,7 @@ import { uuid } from "uuidv4";
 
 import "./EventStagesTable.scss";
 
-import urkFlagIcon from "../../assets/icons/ukr.png";
+import urkFlagIcon from "../../assets/icons/flag.svg";
 
 const teams = [
   {

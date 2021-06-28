@@ -4,10 +4,10 @@ import { v4 as uuid } from "uuid";
 
 import "./Socials.scss";
 
-import fbIcon from "../../assets/socials/fb.png";
-import twIcon from "../../assets/socials/tw.png";
-import twitterIcon from "../../assets/socials/twitter.png";
-import vkIcon from "../../assets/socials/vk.png";
+import fbIcon from "../../assets/socials/fb.svg";
+import twIcon from "../../assets/socials/twitch.svg";
+import twitterIcon from "../../assets/socials/tw.svg";
+import vkIcon from "../../assets/socials/vk.svg";
 
 const list = [
   { id: uuid(), name: "twitter", icon: twitterIcon, link: "" },
