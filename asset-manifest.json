@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/starladder-test/static/css/main.7961b081.chunk.css",
+    "main.js": "/starladder-test/static/js/main.d9cf61a6.chunk.js",
+    "main.js.map": "/starladder-test/static/js/main.d9cf61a6.chunk.js.map",
+    "runtime-main.js": "/starladder-test/static/js/runtime-main.cb50810f.js",
+    "runtime-main.js.map": "/starladder-test/static/js/runtime-main.cb50810f.js.map",
+    "static/js/2.a832ff8f.chunk.js": "/starladder-test/static/js/2.a832ff8f.chunk.js",
+    "static/js/2.a832ff8f.chunk.js.map": "/starladder-test/static/js/2.a832ff8f.chunk.js.map",
+    "static/js/3.59d843f6.chunk.js": "/starladder-test/static/js/3.59d843f6.chunk.js",
+    "static/js/3.59d843f6.chunk.js.map": "/starladder-test/static/js/3.59d843f6.chunk.js.map",
+    "index.html": "/starladder-test/index.html",
+    "static/css/main.7961b081.chunk.css.map": "/starladder-test/static/css/main.7961b081.chunk.css.map",
+    "static/js/2.a832ff8f.chunk.js.LICENSE.txt": "/starladder-test/static/js/2.a832ff8f.chunk.js.LICENSE.txt",
+    "static/media/fb.8fa6415f.svg": "/starladder-test/static/media/fb.8fa6415f.svg",
+    "static/media/flag.b60e2825.svg": "/starladder-test/static/media/flag.b60e2825.svg",
+    "static/media/line.dac4d246.svg": "/starladder-test/static/media/line.dac4d246.svg",
+    "static/media/Card.scss": "/starladder-test/static/media/logo-star-s.7be277fc.png",
+    "static/media/logo.36ab4ba2.png": "/starladder-test/static/media/logo.36ab4ba2.png",
+    "static/media/preview.653fe021.png": "/starladder-test/static/media/preview.653fe021.png",
+    "static/media/EventStagesBoard.scss": "/starladder-test/static/media/reg-button.8ee1c3a1.svg",
+    "static/media/tickets.3afcfa39.svg": "/starladder-test/static/media/tickets.3afcfa39.svg",
+    "static/media/time-end-date.8f72877c.svg": "/starladder-test/static/media/time-end-date.8f72877c.svg",
+    "static/media/tools.02babe15.svg": "/starladder-test/static/media/tools.02babe15.svg",
+    "static/media/trophy.9f861946.svg": "/starladder-test/static/media/trophy.9f861946.svg",
+    "static/media/tw.69ccd01b.svg": "/starladder-test/static/media/tw.69ccd01b.svg",
+    "static/media/twitch.d2e8a8ae.svg": "/starladder-test/static/media/twitch.d2e8a8ae.svg",
+    "static/media/vk.c99e753b.svg": "/starladder-test/static/media/vk.c99e753b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb50810f.js",
+    "static/js/2.a832ff8f.chunk.js",
+    "static/css/main.7961b081.chunk.css",
+    "static/js/main.d9cf61a6.chunk.js"
+  ]
+}
